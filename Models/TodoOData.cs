@@ -1,7 +1,7 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
 
-namespace BlazorOData.Models
+namespace TodoOData.Models
 {
     public class Todo
     {

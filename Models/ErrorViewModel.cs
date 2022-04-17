@@ -1,6 +1,6 @@
 using System;
 
-namespace BlazorOData.Server.Models
+namespace TodoOData.Models
 {
     public class ErrorViewModel
     {

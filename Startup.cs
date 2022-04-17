@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using BlazorOData.Models;
-using BlazorOData.Server.Models;
+using TodoOData.Models;
+using TodoOData.Models;
 using Microsoft.AspNet.OData.Builder;
 using Microsoft.AspNet.OData.Extensions;
 using Microsoft.AspNetCore.Builder;
@@ -14,7 +14,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace BlazorOData.Server
+namespace TodoOData
 {
     public class Startup
     {
@@ -35,7 +35,7 @@ namespace BlazorOData.Server
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
 
-            services.AddDbContext<TodoContext>(db => db.UseInMemoryDatabase("TodoDb"));
+            services.AddDbContext<TodoODataContext>(db => db.UseInMemoryDatabase("TodoDb"));
             services.AddCors(cors =>
             {
                 cors.AddDefaultPolicy(policy => policy.AllowAnyOrigin()
