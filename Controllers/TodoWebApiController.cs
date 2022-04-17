@@ -59,7 +59,7 @@ namespace TodoWebApi.Controllers
             _context.TodoList.Update(task);
             _context.SaveChanges();
 
-            return new NoContent();
+            return new NoContentResult();
         }
     }
 }
